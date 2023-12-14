@@ -15,7 +15,10 @@ app.get("/greeting", (req,res)=>{
         res.send(`<h1>Hello ${req.params.name}!</h1>`)
     })
 
-
+    app.get('/tip/:total/:tipPercentage', (req, res)=> {
+        let percentage = (req.params.total)*(req.params.tipPercentage / 100)
+        res.send(`<h1>Your tip amount: ${percentage} </h1>`);
+      });
 
 
 
