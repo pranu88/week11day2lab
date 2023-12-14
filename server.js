@@ -11,7 +11,7 @@ app.get("/greeting", (req,res)=>{
     res.send("<h1>Hello stranger</h1>")
     
     })
-    app.get('/:name',(req,res)=>{
+    app.get('/greeting/:name',(req,res)=>{
         res.send(`<h1>Hello ${req.params.name}!</h1>`)
     })
 
